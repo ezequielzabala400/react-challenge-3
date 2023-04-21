@@ -52,14 +52,22 @@ export const TaskListContainer = styled.ul`
         background-color: var(--green);
         color: black;
         border-radius: 20px;
-        padding: 12px;
+        padding: 12px 20px;
         font-size: 26px;
         font-weight: 900;
         font-family: monospace;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img{
+            height: 20px;
+            cursor: pointer;
+        }
 
         &:nth-child(odd){
-            background-color: black;
-            color: var(--green);
+            background-color: rgba(255,255,255,0.7);
+            color: black;
         }
     }
 

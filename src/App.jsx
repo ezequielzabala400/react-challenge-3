@@ -1,11 +1,18 @@
-import ToDo from "./components/ToDo/ToDo"
+import { BrowserRouter } from "react-router-dom"
+import Layout from "./components/Layout/Layout"
 import { GlobalStyles } from "./styles/GlobalStyles"
+import { PendingTasksProvider } from "./context/pendingTasks"
 
 function App() {
 
+
   return (
     <>
-      <ToDo />
+      <BrowserRouter>
+        <PendingTasksProvider>
+          <Layout />
+        </PendingTasksProvider>
+      </BrowserRouter>
       <GlobalStyles />
     </>
   )
